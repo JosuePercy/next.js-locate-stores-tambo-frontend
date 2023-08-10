@@ -1,0 +1,22 @@
+.display-center-search {
+  background-color: red;
+}
+
+.display-block-search {
+  display: none;
+  border-radius: 24px;
+}
+
+.zzz > div {
+  border-radius: 24px !important;
+}
+@media screen and (max-width: 500px) {
+  .display-center-search {
+    display: none;
+  }
+
+  .display-block-search {
+    display: block;
+    border-radius: 24px;
+  }
+}
