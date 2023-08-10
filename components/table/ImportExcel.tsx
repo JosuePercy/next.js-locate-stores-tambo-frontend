@@ -18,7 +18,7 @@ export const ImportExcel = () => {
 
 
     const registerStores = async (data: any) => {
-        const response = await fetch("http://localhost:3000/tiendas", {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/tiendas`, {
             method: "POST",
             mode: "cors",
             cache: "no-cache",
@@ -60,7 +60,7 @@ export const ImportExcel = () => {
                         if (sheet.length) {
                             const data: Tienda[] = utils.sheet_to_json(workbook.Sheets[sheet[0]], { raw: false });
 
-                            const tiendaTmp: Tienda[] = data.map((store) => {
+                            const tiendaTmp: any = data.map((store) => {
                                 //console.log("store", JSON.stringify(store))
                                 //console.table(store)
                                 //let claves = Object.keys(store);
