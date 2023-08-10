@@ -68,6 +68,10 @@ export default function Prueba() {
     const [tiendas, setTiendas] = useState<Tienda[]>([])
 
     useEffect(() => {
+        console.log("process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY =>", process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY)
+
+
+
         fetch(`${process.env.NEXT_PUBLIC_API_URL}/tiendas`)
             .then(response => response.json())
             .then(data => {
