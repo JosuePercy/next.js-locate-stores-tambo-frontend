@@ -118,8 +118,9 @@ export default function Prueba() {
         setActiveMarker(marker);
     };
 
-    const mapOptions = {
-        disableDefaultUI: true
+    const mapOptions: any = {
+        disableDefaultUI: true,
+        gestureHandling: 'greedy'
     };
 
 
@@ -157,6 +158,7 @@ export default function Prueba() {
                         zoom={mapZoom}
                         mapContainerClassName="map-container"
                         onClick={() => setActiveMarker(null)}
+
                     >
 
                         <MarkerF
