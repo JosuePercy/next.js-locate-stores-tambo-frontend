@@ -81,14 +81,12 @@ export default function Prueba() {
             .catch(error => console.error('Error de consulta a la api de tiendas:', error));
 
 
-        let idWatcher = navigator.geolocation.watchPosition(
+        let idWatcher = navigator.geolocation.getCurrentPosition(
             onActualizacionDeUbicacion,
             onErrorDeUbicacion,
             opcionesDeSolicitud
         );
-        return () => {
-            navigator.geolocation.clearWatch(idWatcher); // cuando el usuario interactúa con Google Maps y realiza cambios en la ubicación, puedes asegurarte de que la actualización de ubicación se detenga y no afecte a tu lógica de actualización de tiendas 
-        };
+
         //console.log("idWatcher ==> ", idWatcher);
     }, []);
 
