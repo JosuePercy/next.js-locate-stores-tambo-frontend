@@ -68,10 +68,11 @@ export default function Prueba() {
     const [tiendas, setTiendas] = useState<Tienda[]>([])
 
     useEffect(() => {
-        fetch('http://localhost:3000/tiendas')
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/tiendas`)
             .then(response => response.json())
             .then(data => {
                 setTiendas(data)
+                console.log("data", data)
             })
             .catch(error => console.error('Error de consulta a la api de tiendas:', error));
 
