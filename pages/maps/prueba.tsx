@@ -86,6 +86,9 @@ export default function Prueba() {
             onErrorDeUbicacion,
             opcionesDeSolicitud
         );
+        return () => {
+            navigator.geolocation.clearWatch(idWatcher); // cuando el usuario interactúa con Google Maps y realiza cambios en la ubicación, puedes asegurarte de que la actualización de ubicación se detenga y no afecte a tu lógica de actualización de tiendas 
+        };
         //console.log("idWatcher ==> ", idWatcher);
     }, []);
 
@@ -120,7 +123,7 @@ export default function Prueba() {
 
     const mapOptions: any = {
         disableDefaultUI: true,
-        gestureHandling: 'greedy'
+        gestureHandling: 'greedy' //  gestureHandling: se utiliza para controlar cómo se manejan los gestos en el mapa.
     };
 
 
@@ -129,14 +132,14 @@ export default function Prueba() {
     return <>
         <div style={{ display: 'flex' }}>
 
-            <Grid className={styles["display-center-search"]}>
-                <Grid container sx={{ display: "block", width: "20%", padding: "15px" }}>
+            <Grid className={styles["display-center-search"]} sx={{ width: "20%" }}>
+                <Grid container sx={{ display: "block", padding: "15px" }}>
                     <Grid item>
-                        <Typography sx={{ fontSize: "25px", fontWeight: 600 }}>Ruta 2</Typography>
+                        <Typography sx={{ fontSize: "25px", fontWeight: 600, color: "white" }}>Ruta 2</Typography>
                     </Grid>
 
                     <Grid item>
-                        <Typography sx={{ fontSize: "25px", fontWeight: 600 }}>Fecha: 08/08/2023</Typography>
+                        <Typography sx={{ fontSize: "25px", fontWeight: 600, color: "white" }}>Fecha: 08/08/2023</Typography>
                     </Grid>
                     <Grid item>
                         <Autocomplete
@@ -144,7 +147,11 @@ export default function Prueba() {
                             id="combo-box-demo"
                             sx={{ width: "100%", marginTop: "1rem", zIndex: 10 }}
                             options={nombreTiendas}
-                            renderInput={(params) => <TextField {...params} label="Seleccionar tienda" />}
+                            renderInput={(params) => <TextField className={styles["zzz"]}
+                                sx={{
+                                    backgroundColor:
+                                        "white", borderRadius: "24px"
+                                }} {...params} label="Seleccionar tienda" />}
                         />
                     </Grid>
                 </Grid>
