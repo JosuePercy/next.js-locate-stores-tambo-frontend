@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
   })
 
   useEffect(() => {
-    fetch(`http://localhost:3000/rutas/today/1`)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/rutas/today/1`)
       .then(response => response.json())
       .then(data => {
         setArrayStores(data)

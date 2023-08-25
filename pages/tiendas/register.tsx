@@ -94,7 +94,7 @@ const Tiendas = () => {
     //     })
 
     useEffect(() => {
-        fetch(`http://localhost:3000/rutas`)
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/rutas`)
             .then(response => response.json())
             .then(data => {
                 const arrayRutas = data.map((ruta: Rutas) => {
@@ -189,7 +189,7 @@ const Tiendas = () => {
 
         console.log("rutasDiariasss ==> ", JSON.stringify(rutasDiariasss))
 
-        await fetch(`http://localhost:3000/rutas/rutas-diarias`, {
+        await fetch(`${process.env.NEXT_PUBLIC_API_URL}/rutas/rutas-diarias`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -51,9 +51,8 @@ export default function CustomDrawer() {
         }
         setActiveMarker(marker);
     };
-
     useEffect(() => {
-        fetch(`http://localhost:3000/rutas/today/1`)
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/rutas/today/1`)
             .then(response => response.json())
             .then(data => {
                 setTiendasLocation(data)
