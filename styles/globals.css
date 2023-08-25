@@ -37,7 +37,7 @@ a {
 
 .map-container {
   width: 100%;
-  height: calc(100vh - 35px);
+  height: calc(100vh - 70px);
 }
 
 .combobox-input {
@@ -68,7 +68,7 @@ ul li {
   border-color: #f5c6cb;
 }
 .container-page {
-  height: calc(100vh - 70px);
+  /* height: calc(100vh - 70px); */
   overflow: auto;
 }
 .container-wrapper {
