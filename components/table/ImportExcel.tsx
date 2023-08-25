@@ -59,7 +59,6 @@ export const ImportExcel = () => {
                         const sheet = workbook.SheetNames;
                         if (sheet.length) {
                             const data: Tienda[] = utils.sheet_to_json(workbook.Sheets[sheet[0]], { raw: false });
-
                             const tiendaTmp: any = data.map((store) => {
                                 //console.log("store", JSON.stringify(store))
                                 //console.table(store)
@@ -92,7 +91,6 @@ export const ImportExcel = () => {
                                 }
                             })
                             registerStores(tiendaTmp)
-
                         }
                     }
                 };
