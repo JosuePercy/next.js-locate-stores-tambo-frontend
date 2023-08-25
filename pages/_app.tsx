@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
         setArrayStores(data)
       })
       .catch(error => {
-        alert("No hay tiendas, registrar porfavor")
+        /* alert("No hay tiendas, registrar porfavor") */
         console.error(error);
       });
   }, [])
