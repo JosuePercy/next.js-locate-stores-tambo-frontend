@@ -15,7 +15,7 @@
   /* align-items: center; */
   display: flex;
   padding: 0px 20px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .background-session {
@@ -52,11 +52,14 @@
 
 .login-display-col {
   width: 944px;
-  display: flex;
-  margin: auto;
-  overflow: hidden;
-  /* display: grid;
-  place-content: center; */
+  /* display: flex; */
+  /* margin: auto; */
+  /* overflow: hidden; */
+  position: relative;
+  /* position: absolute; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
 }
 * img {
   display: flex;
