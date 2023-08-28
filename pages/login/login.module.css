@@ -11,8 +11,8 @@
 
 .login-display-center {
   margin: auto;
-  /* height: 100vh; */
-  align-items: center;
+  height: 100vh;
+  /* align-items: center; */
   display: flex;
   padding: 0px 20px;
 }
@@ -53,6 +53,8 @@
   width: 944px;
   display: flex;
   margin: auto;
+  display: grid;
+  place-content: center;
 }
 * img {
   display: flex;
