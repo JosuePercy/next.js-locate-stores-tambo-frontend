@@ -18,9 +18,6 @@ const Login = () => {
                         <figure>
                             <img src='../../login/logo.png' />
                         </figure>
-                        <figure>
-                            <img src='../../login/tambo-login.png' />
-                        </figure>
                     </div>
                     <p>
                         Inicia sesión y obten un
