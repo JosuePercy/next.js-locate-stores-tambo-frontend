@@ -11,11 +11,10 @@
 
 .login-display-center {
   margin: auto;
-  /* height: 100vh; */
-  /* align-items: center; */
+  height: 100vh;
+  align-items: center;
   display: flex;
   padding: 0px 20px;
-  /* overflow: hidden; */
 }
 
 .background-session {
@@ -52,14 +51,8 @@
 
 .login-display-col {
   width: 944px;
-  /* display: flex; */
-  /* margin: auto; */
-  /* overflow: hidden; */
-  position: relative;
-  /* position: absolute; */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 50%);
+  display: flex;
+  margin: auto;
 }
 * img {
   display: flex;
