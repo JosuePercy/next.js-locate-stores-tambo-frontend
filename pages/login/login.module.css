@@ -126,6 +126,7 @@ figure {
   outline: none;
   box-sizing: border-box;
   border: 1px solid var(--main-bg-color-input);
+  height: 50px;
 }
 
 /* password */
@@ -148,6 +149,7 @@ figure {
   outline: none;
   box-sizing: border-box;
   border: 1px solid var(--main-bg-color-input);
+  height: 50px;
 }
 
 /* BUTTOM */
@@ -184,6 +186,7 @@ figure {
   }
   .col-2 {
     width: 100%;
+    padding: 26px 15px !important;
   }
   .login-display-center {
     margin: auto;
@@ -195,9 +198,6 @@ figure {
 }
 
 @media screen and (max-width: 450px) {
-  .col-2 {
-    padding: 75px 15px;
-  }
   .login-display-center {
     padding: 20px 0px !important;
   }
@@ -210,11 +210,8 @@ figure {
 }
 .display-icon-input-password {
   position: absolute;
-  top: 32px;
+  top: 40px;
   right: 11px;
-  /* top: 58%;
-    right: 57px;
-    bottom: 50%; */
 }
 .field-password {
   position: relative;
