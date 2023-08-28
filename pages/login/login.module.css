@@ -53,8 +53,8 @@
   width: 944px;
   display: flex;
   margin: auto;
-  display: grid;
-  place-content: center;
+  /* display: grid;
+  place-content: center; */
 }
 * img {
   display: flex;
