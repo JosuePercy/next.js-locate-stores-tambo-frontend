@@ -4,6 +4,7 @@ import { MarkerZoom } from "../map";
 export interface GlobalContent {
   marker: MarkerZoom;
   setMarker: (c: MarkerZoom) => void;
+  closeMenu: () => void;
 }
 
 export const MyMarkerGlobalContext = createContext<GlobalContent>({
@@ -12,6 +13,7 @@ export const MyMarkerGlobalContext = createContext<GlobalContent>({
     zoom: 12,
   },
   setMarker: () => {},
+  closeMenu: () => {},
 });
 
 export const useMarkerGlobalContext = () => useContext(MyMarkerGlobalContext);

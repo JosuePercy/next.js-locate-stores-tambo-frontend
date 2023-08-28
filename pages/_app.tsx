@@ -29,10 +29,16 @@ export default function App({ Component, pageProps }: AppProps) {
       });
   }, [])
 
+  const closeMenu = () => {
+    document
+      .querySelector(".display-center-search")
+      ?.classList.toggle("show-menu-aside");
+  };
+
   return (
     <SnackbarProvider maxSnack={3}>
       <MyStoresGlobalContext.Provider value={{ arrayStores, setArrayStores }}>
-        <MyMarkerGlobalContext.Provider value={{ marker, setMarker }}>
+        <MyMarkerGlobalContext.Provider value={{ marker, setMarker, closeMenu }}>
           <Component {...pageProps} />
         </MyMarkerGlobalContext.Provider>
       </MyStoresGlobalContext.Provider>

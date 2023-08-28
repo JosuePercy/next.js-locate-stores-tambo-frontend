@@ -9,12 +9,12 @@ import { useMarkerGlobalContext } from '../../../interfaces/redux/storemarker-co
 
 
 export default function AsideMenu() {
-    const { arrayStores, setArrayStores } = useStoresGlobalContext()
-    const { marker, setMarker } = useMarkerGlobalContext()
 
+    const { arrayStores, setArrayStores } = useStoresGlobalContext()
+    const { marker, setMarker, closeMenu } = useMarkerGlobalContext()
 
     return (
-        <div className={"display-center-search "}>
+        <div className={"display-center-search"}>
 
             <div className='wraper-search-title'>
                 <Typography sx={{ fontSize: "25px", fontWeight: 600, color: "#8F9CC0" }}>{arrayStores.ruta?.nombre}</Typography>
@@ -34,6 +34,7 @@ export default function AsideMenu() {
                                 className={`location-stores ${marker.name === element.name ? "active" : ""}`}
                                 onClick={() => {
                                     setMarker({ name: element.name, zoom: 16 })
+                                    closeMenu();
                                 }}
                                 key={index}>
 
@@ -45,7 +46,9 @@ export default function AsideMenu() {
                                     textTransform={'capitalize'}
                                     fontFamily={'Inter'}
                                     fontSize={16}
-                                    fontWeight={600}>
+                                    fontWeight={600}
+
+                                >
                                     {element.name}
                                 </Typography>
                             </button>
