@@ -54,6 +54,7 @@
   width: 944px;
   display: flex;
   margin: auto;
+  overflow: hidden;
   /* display: grid;
   place-content: center; */
 }
