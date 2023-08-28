@@ -84,3 +84,4 @@ ul li {
 }
 @import "../pages/maps/prueba.module.css";
 @import "../components/layout-components/footer/footer.module.css";
+@import "../pages/login/login.module.css";
