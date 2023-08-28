@@ -193,4 +193,10 @@ figure {
   position: absolute;
   top: 32px;
   right: 11px;
+  /* top: 58%;
+    right: 57px;
+    bottom: 50%; */
+}
+.field-password {
+  position: relative;
 }
