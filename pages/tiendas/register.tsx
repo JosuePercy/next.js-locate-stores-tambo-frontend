@@ -285,7 +285,11 @@ const Tiendas = () => {
                         <Grid display={'flex'} flexDirection={'column'} gap={2}>
                             {
                                 countRuteStore.map((element) => (
-                                    <RowFormStore key={element} position={element} onRowDelete={onRowDelete} onRowDataChange={handleRowDataChange} />
+                                    <RowFormStore key={element}
+                                        position={element}
+                                        onRowDelete={onRowDelete}
+                                        onRowDataChange={handleRowDataChange}
+                                    />
                                 ))
                             }
                             {/* {
