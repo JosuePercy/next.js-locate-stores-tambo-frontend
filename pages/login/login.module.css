@@ -189,3 +189,8 @@ figure {
     padding: 75px 10px;
   }
 }
+.display-icon-input-password {
+  position: absolute;
+  top: 32px;
+  right: 11px;
+}

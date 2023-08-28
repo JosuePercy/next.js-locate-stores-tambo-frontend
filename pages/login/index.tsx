@@ -47,11 +47,13 @@ const Login = () => {
                                 type={showPassword ? 'password' : 'text'}
                                 placeholder='Ingresa tu contraseña'
                             />
-                            {showPassword ? (
-                                <VisibilityOffIcon onClick={togglePasswordVisibility} />
-                            ) : (
-                                <VisibilityIcon onClick={togglePasswordVisibility} />
-                            )}
+                            <div className='display-icon-input-password'>
+                                {showPassword ? (
+                                    <VisibilityOffIcon onClick={togglePasswordVisibility} />
+                                ) : (
+                                    <VisibilityIcon onClick={togglePasswordVisibility} />
+                                )}
+                            </div>
                         </div>
                     </form>
                     <button className='buttom-session'>
