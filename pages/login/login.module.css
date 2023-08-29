@@ -186,6 +186,7 @@ figure {
   }
   .col-2 {
     padding: 26px 15px !important;
+    width: 100%;
   }
   .login-display-center {
     margin: auto;
