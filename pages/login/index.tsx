@@ -11,7 +11,7 @@ interface Props {
 }
 
 const users = [
-    { user: 'josuehuallulo12@gmail.com', password: '1234' },
+    { user: 'josuehuallullo12@gmail.com', password: '1234' },
     { user: 'erickhuallullo@gmail.com', password: '3212' }
 ]
 
