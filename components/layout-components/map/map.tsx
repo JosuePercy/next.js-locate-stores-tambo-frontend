@@ -121,7 +121,6 @@ export default function ComponentMap() {
                                     toggleMenu()
                                 }}
                                 sx={{
-
                                     backgroundColor: "white", borderRadius: "20px", '&:hover': {
                                         backgroundColor: "white"
                                     }
