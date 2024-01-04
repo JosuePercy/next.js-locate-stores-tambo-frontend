@@ -3,18 +3,10 @@ import React, { useState } from 'react'
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
-
-
 interface Props {
-    user: string
-    pass: string
+    mail: string
+    password: string
 }
-
-const users = [
-    { user: 'josuehuallullo12@gmail.com', password: '1234' },
-    { user: 'erickhuallullo@gmail.com', password: '3212' }
-]
-
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(true);
@@ -23,21 +15,42 @@ const Login = () => {
     const [pass, setPass] = useState('');
     const [loggedInUser, setLoggedInUser] = useState('');
 
+
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     };
+    const handleLogin = async () => {
+        const data = { user: user, password: pass };
 
+        try {
+            const response = await fetch('http://localhost:3000/login', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data)
+            });
 
-    const handleLogin = () => {
-        const validatedUser = users.find(
-            (person) => person.user === user && person.password === pass
-        );
-        if (validatedUser) {
-            window.location.href = "/tiendas/register";
-        } else {
-            alert("Correo electrónico o contraseña incorrecta");
+            if (!response.ok) {
+                throw new Error("La respuesta no es correcta");
+            }
+
+            const responseData = await response.json();
+            const status = responseData.status;
+
+            if (status === "ok") {
+                window.location.href = '/tiendas/register';
+            } else {
+                alert("Correo electrónico o contraseña incorrecta");
+            }
+        } catch (error) {
+            console.error("Error durante el login", error);
+            // Mostrar un mensaje de error al usuario si es necesario
         }
     };
+
+
+
     console.log("handleLogin ==> ", handleLogin)
 
     return (

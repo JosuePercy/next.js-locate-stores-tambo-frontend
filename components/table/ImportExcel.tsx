@@ -18,6 +18,7 @@ export const ImportExcel = () => {
 
 
     const registerStores = async (data: any) => {
+
         const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/tiendas`, {
             method: "POST",
             mode: "cors",

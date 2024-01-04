@@ -17,6 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
     tiendas: []
   })
 
+
   useEffect(() => {
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/rutas/today/1`)
       .then(response => response.json())

@@ -8,6 +8,7 @@ import { useSnackbar } from 'notistack';
 import Layout from '../../components/layout/layout';
 //import { useRouter } from 'next/router';
 import Router from 'next/router'
+import withAuth from '../withAuth';
 
 interface Tienda {
     id_tiendas: number;
@@ -149,7 +150,7 @@ const Tiendas = () => {
         //setListError()
         const erros = []
         if (rutasDiarias === undefined || rutasDiarias.id_rutas_diarias === undefined) {
-            //setListError([...listError, "La ruta es requerida"])
+            // setListError([...listError, "La ruta es requerida"])
             erros.push("La ruta es requerida")
         }
         if (rutasDiariasTiendas.length === 0) {
@@ -250,7 +251,6 @@ const Tiendas = () => {
                             </div>
                         ) : null
                     }
-
                     <Grid sx={{ marginBottom: '20px' }}>
                         <Typography >Seleccione su número de ruta</Typography>
                         <Card sx={{ paddingTop: '20px' }} >
@@ -361,4 +361,7 @@ const Tiendas = () => {
     )
 }
 
-export default Tiendas;
+
+
+
+export default withAuth(Tiendas);
