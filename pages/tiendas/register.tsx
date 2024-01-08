@@ -188,7 +188,7 @@ const Tiendas = () => {
         }
 
 
-/*         console.log("rutasDiariasss ==> ", JSON.stringify(rutasDiariasss)) */
+        console.log("rutasDiariasss ==> ", JSON.stringify(rutasDiariasss))
 
         await fetch(`${process.env.NEXT_PUBLIC_API_URL}/rutas/rutas-diarias`, {
             method: 'POST',
