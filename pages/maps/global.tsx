@@ -32,6 +32,10 @@ export default function MapsGlobal() {
         googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "",
     });
 
+    console.log("process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ==>", process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY)
+
+    console.log("isLoaded", isLoaded)
+
     if (!isLoaded) return <div>Loading...</div>;
 
     return (
