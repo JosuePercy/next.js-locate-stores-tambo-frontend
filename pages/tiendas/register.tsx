@@ -83,7 +83,6 @@ const Tiendas = () => {
     }
 
 
-
     // .then(data => {
     //         const arrayTienda = data.map((tienda: Tienda) => {
     //             return {
@@ -98,12 +97,13 @@ const Tiendas = () => {
         fetch(`${process.env.NEXT_PUBLIC_API_URL}/rutas`)
             .then(response => response.json())
             .then(data => {
-                const arrayRutas = data.map((ruta: Rutas) => {
+                const arrayRutas = data.map((ruta: Rutas) => {  
                     return {
                         id: ruta.id,
                         label: ruta.nombre
                     }
                 })
+                console.log("arrrayRutas==>", arrayRutas)
                 setSelectRuta(arrayRutas)
             })
 
@@ -225,7 +225,6 @@ const Tiendas = () => {
     };
     return (
         <Layout>
-
             <div className={"container-page"}>
                 <div className={"container-wrapper"}>
                     <h1 className='title-page'>Servicio del dia</h1>
